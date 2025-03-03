@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OK WIN MOD - Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <style>
+        body {
+            font-family: 'El Messiri', sans-serif;
+            background: linear-gradient(135deg, #1e1e2f, #3a3a6b);
+            color: white;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            overflow: hidden;
+        }
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(255,255,255,0.2);
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+        .input-group {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .input-group i {
+            color: #34D399;
+            margin-right: 10px;
+        }
+        .input-field {
+            border: none;
+            outline: none;
+            width: 100%;
+            background: transparent;
+            color: white;
+            font-size: 18px;
+        }
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 10px;
+            background: linear-gradient(90deg, #34D399, #059669);
+            color: white;
+            transition: 0.3s ease;
+        }
+        .login-btn:hover {
+            background: linear-gradient(90deg, #059669, #34D399);
+        }
+        .error-text, .loading-text {
+            font-weight: bold;
+            margin-top: 10px;
+            display: none;
+        }
+        .error-text { color: red; }
+        .loading-text { color: yellow; }
+        .get-key {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #38bdf8;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .get-key:hover {
+            color: #1e90ff;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+    <div class="card">
+        <h1 class="text-lg font-bold text-blue-300"><i class="fas fa-lock icon"></i> OK WIN MOD - Login</h1>
+        
+        <div class="input-group">
+            <i class="fas fa-key"></i>
+            <input type="text" id="keyInput" class="input-field" placeholder="Enter Key" required>
+        </div>
+
+        <p id="errorText" class="error-text"><i class="fas fa-times-circle"></i> Invalid Key</p>
+        <p id="loadingText" class="loading-text"><i class="fas fa-spinner fa-spin"></i> CHECKING KEY IN SERVER...</p>
+
+        <button class="login-btn mt-3" onclick="checkKey()">
+            <i class="fas fa-sign-in-alt icon"></i> Login
+        </button>
+
+        <p class="get-key" onclick="window.open('https://t.me/+UXXqSylBcNZhMGM9', '_blank')">
+            <i class="fab fa-telegram"></i> Get Key
+        </p>
+    </div>
+
+    <script>
+        function checkKey() {
+            let keyInput = document.getElementById("keyInput").value.trim();
+            let errorText = document.getElementById("errorText");
+            let loadingText = document.getElementById("loadingText");
+
+            errorText.style.display = "none";
+            loadingText.style.display = "none";
+
+            if (keyInput === "Anxt Op") {
+                loadingText.style.display = "block";
+                setTimeout(() => {
+                    window.location.href = "mod.html";
+                }, 5000);
+            } else {
+                errorText.style.display = "block";
+            }
+        }
+
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 80 },
+                "color": { "value": "#ffffff" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.5 },
+                "size": { "value": 3 },
+                "move": { "speed": 2 }
+            }
+        });
+    </script>
+
+</body>
+</html>
